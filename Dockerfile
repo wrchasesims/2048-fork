@@ -1,5 +1,15 @@
-from nginx:alpine
+FROM node:16-alpine
 
-copy . /usr/share/nginx/html
+WORKDIR /app
 
-expose 80
+COPY package.json yarn.lock ./
+
+RUN yarn install
+
+COPY . .
+
+RUN yarn build
+
+EXPOSE 3000
+
+CMD ["yarn", "start"]
