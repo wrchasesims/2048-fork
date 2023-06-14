@@ -68,4 +68,4 @@ jobs:
       -
         name: Deploy to Elastic Beanstalk
         run: |
-          eb deploy
+          eb deploy cicd-eb-dev
