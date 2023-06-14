@@ -66,6 +66,6 @@ jobs:
           chmod +x eb-init.sh
           ./eb-init.sh
       -
-        name: Deploy to Elastic Beanstalk
+        name: Create Env / Deploy App
         run: |
-          eb deploy cicd-eb-dev
+          eb create cicd-eb-dev
