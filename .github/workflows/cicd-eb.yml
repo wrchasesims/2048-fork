@@ -63,8 +63,8 @@ jobs:
       -
         name: Init Elastic Beanstalk
         run: |
-          # Answer 'no' to CodeCommit
-          echo n | eb init
+          chmod +x eb-init.sh
+          ./eb-init.sh
       -
         name: Deploy to Elastic Beanstalk
         run: |
